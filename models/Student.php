@@ -40,8 +40,7 @@ class Student extends \yii\db\ActiveRecord
         return [
             [['name','email','level','birthday'], 'required'],
             [['email'], 'email'],
-            [['birthday'], 'date', 'format'=>'YYYY-mm-dd', 'message'=>'Пожалуйста, укажите дату рождения в формате YYYY-mm-dd'],
-            [['birthday'], 'safe'],
+            [['birthday'], 'date', 'format'=>'yyyy-M-d', 'message'=>'Пожалуйста, укажите дату рождения в формате YYYY-mm-dd'],
             [['level'], 'string'],
             [['level'], 'default', 'value' => 'A1'],
             [['name', 'email'], 'string', 'max' => 255],
